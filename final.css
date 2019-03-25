@@ -1,0 +1,136 @@
+/*création des grilles "générales de placement*/
+body {
+    display: grid;
+    grid-template: auto/auto;
+    background: purple;
+}
+
+/*mise en page du header*/
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid grey;
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+}
+
+/*placement de h1*/
+h1 {
+    align-self: center;
+    text-transform: uppercase;
+    color: palevioletred;
+    font-size: 500%;
+    font-family: cursive;
+}
+/*mise en place de nav*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: pink;
+    border-top: 2px solid grey;
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+}
+
+nav a {
+    color: pink;
+    font-family: cursive;
+    padding: 3px;
+}
+
+
+
+/*mise en page du footer*/
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    color: crimson;
+    font-family: cursive;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+    
+}
+
+footer p {
+    text-align: center;
+}
+
+section img {
+    margin: 10px;
+    border: 3px solid pink;
+}
+
+/*grand écran*/
+
+/*Mise en place des images et de aside*/
+main {
+    display: grid;
+    grid-template: 1fr / 85% 15%;
+}
+
+/*mise en page section*/
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid grey;
+    align-content: center;
+}
+
+/*couleur aside*/
+aside {
+    color: palevioletred;
+    text-align: justify;
+    padding: 3px;
+    font-family: cursive;
+    border: 2px solid grey;
+    border-left:0px;
+}
+
+aside h2 {
+    display: flex;
+    justify-content: center;
+}
+
+/*écran entre 768px et 1024px*/
+@media screen and (max-width:1024px) {
+    main {
+        display: grid;
+        grid-template: 1fr / 75% 25%;
+    }
+
+    section {
+        justify-content: center;
+    }
+
+    section img {
+        width: 400px;
+        margin: 10px;
+        border: 3px solid pink;
+    }
+}
+
+/*écran inf 768px */
+@media screen and (max-width:768px) {
+    main {
+        display: flex;
+    }
+
+    aside {
+        display: none;
+    }
+
+    h1 {
+        font-size: 300%;
+    }
+
+    img {
+        width: 200px
+    }
+}
